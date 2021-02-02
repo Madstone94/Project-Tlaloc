@@ -1,13 +1,19 @@
+#include "AirSensor.h"
+#include "LightSensor.h"
+
+LightSensor light;
+AirSensor air;
+
 void setup() {
   Serial.begin(9600);
   Greeting();
-  StartAirSensor();
 }
 
 void loop() {
-  ReportAir();
+  light.Report();
+  air.ReportTemp();
+  air.ReportHumid();
 }
-
 void Greeting() {
   Serial.println(F("------------------------------------"));
   Serial.println(F("TLALOC"));
