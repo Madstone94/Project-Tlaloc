@@ -1,8 +1,10 @@
 #include "AirSensor.h"
 #include "LightSensor.h"
+#include "Display.h"
 
 LightSensor light;
 AirSensor air;
+Display pDisplay;
 
 void setup() {
   Serial.begin(9600);
